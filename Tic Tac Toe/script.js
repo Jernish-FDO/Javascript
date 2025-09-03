@@ -209,4 +209,4 @@ aboutBtn.onclick = () => {
     showPopup('Tic Tac Toe [XO] game\n\nYou play as O. CPU plays as X.');
 };
 
-renderBoard();
+renderBoard(); 
