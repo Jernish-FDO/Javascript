@@ -29,7 +29,7 @@ Test your luck and logic by guessing a secret number between **1 and 10**. Can y
 
 ## 📸 Screenshot
 
-![Guess the Number Game Screenshot](https://user-images.githubusercontent.com/placeholder/guess-the-number-demo.png)
+![Guess the Number Game Screenshot](./image.png)
 
 ---
 
@@ -59,7 +59,7 @@ Test your luck and logic by guessing a secret number between **1 and 10**. Can y
 
 ## 🧑‍💻 Author
 
-Made by [Your Name]  
+Made by Jernish,  
 Feel free to fork, modify, and share!
 
 ---
@@ -83,7 +83,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## 📫 Contact
 
-For inquiries, please email [your.email@example.com](mailto:your.email@example.com).
+For inquiries, please email [jernishamala9@gmail.com](mailto:jernishamala9@gmail.com).
 
 ---
 
