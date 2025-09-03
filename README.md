@@ -19,9 +19,9 @@ A basic calculator web app that performs addition, subtraction, multiplication, 
   - ➕ ➖ ✖️ ➗ Buttons for each operation
   - 📊 Displays the result below the buttons
 - **Usage:**
-  1. Enter two numbers.
-  2. Click the desired operation button.
-  3. The result is shown below.
+  - Enter two numbers.
+  - Click the desired operation button.
+  - The result is shown below.
 
 ---
 
@@ -36,9 +36,28 @@ A simple guessing game where the user tries to guess a randomly generated number
   - 📈 Displays your guess, the computer's number, and your score
   - 🎉 Alerts if you win or lose
 - **Usage:**
-  1. Enter a number between 1 and 10.
-  2. Click "Check The Number".
-  3. See if your guess matches the computer's number.
+  - Enter a number between 1 and 10.
+  - Click "Check The Number".
+  - See if your guess matches the computer's number.
+
+---
+
+### 3️⃣ Tic Tac Toe 🎮
+
+A classic Tic Tac Toe game where you play against the CPU.
+
+- **Location:** [`Tic Tac Toe/`](Tic%20Tac%20Toe/)
+- **Features:**
+  - Play against the CPU
+  - Selectable difficulty levels (Easy, Medium, Hard)
+  - Interactive game board
+  - Displays winner or draw messages
+  - Reset button to start a new game
+- **Usage:**
+  - Select a difficulty level.
+  - Click on an empty cell to place your 'O'.
+  - The CPU will then place its 'X'.
+  - The first to get three in a row, column, or diagonal wins.
 
 ---
 
