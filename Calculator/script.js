@@ -1,46 +1,88 @@
-// Selecting Input Box
-var box1 = document.getElementById("num1");
-var box2 = document.getElementById("num2");
-// Selecting Result
-var result = document.getElementById("result");
+const display = document.getElementById('display');
+const history = document.getElementById('history');
+const buttons = document.querySelectorAll('.btn');
+let current = '0';
+let prev = '';
+let operator = '';
+let historyText = '';
+let gtTotal = 0;
 
-// Converting Text to Number
-var value1 = Number(box1.value);
-var value2 = Number(box2.value);
-
-// Adding Two Numbers and Print The values
-function add() {
-  // Converting Text to Number
-  var value1 = Number(box1.value);
-  var value2 = Number(box2.value);
-  // Add The Two Values and Store
-  result.textContent = value1 + value2;
+function updateDisplay() {
+  display.textContent = current;
+  history.textContent = historyText;
 }
 
-// Subtracting Two Numbers and Print The values
-function sub() {
-  // Converting Text to Number
-  var value1 = Number(box1.value);
-  var value2 = Number(box2.value);
-  // Add The Two Values and Store
-  result.textContent = value1 - value2,"Result is";
+function clearAll() {
+  current = '0';
+  prev = '';
+  operator = '';
+  historyText = '';
+  updateDisplay();
 }
 
-// Multipliying Two Numbers and Print The values
-function mul() {
-  // Converting Text to Number
-  var value1 = Number(box1.value);
-  var value2 = Number(box2.value);
-  // Add The Two Values and Store
-  result.textContent = value1 * value2;
+function inputNum(num) {
+  if (current.length > 12) return;
+  if (current === '0' && num !== '.') {
+    current = num;
+  } else if (num === '.' && current.includes('.')) {
+    return;
+  } else {
+    current += num;
+  }
+  updateDisplay();
 }
 
-// Dividing Two Numbers and Print The values
-function div() {
-  // Converting Text to Number
-  var value1 = Number(box1.value);
-  var value2 = Number(box2.value);
-  // Add The Two Values and Store
-  result.textContent = Math.floor(value1 / value2);
+function setOperator(op) {
+  if (operator && prev) {
+    calculate();
+  }
+  operator = op;
+  prev = current;
+  current = '0';
 }
 
+function calculate() {
+  let a = parseFloat(prev);
+  let b = parseFloat(current);
+  let result = 0;
+  if (operator === '+') result = a + b;
+  else if (operator === '−') result = a - b;
+  else if (operator === '×') result = a * b;
+  else if (operator === '÷') result = b !== 0 ? a / b : 'Error';
+  else if (operator === '%') result = a % b;
+  result = (typeof result === 'number' && !isNaN(result)) ? +result.toFixed(8) : result;
+  historyText = `${prev} ${operator} ${current} = ${result}`;
+  current = result.toString();
+  prev = '';
+  operator = '';
+  updateDisplay();
+}
+
+function handleGT() {
+  if (!isNaN(parseFloat(current))) {
+    gtTotal += parseFloat(current);
+    historyText = `GT: ${gtTotal}`;
+    updateDisplay();
+  }
+}
+
+buttons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    if (btn.dataset.num !== undefined) {
+      inputNum(btn.dataset.num);
+    } else if (btn.dataset.action) {
+      switch (btn.dataset.action) {
+        case 'clear': clearAll(); break;
+        case 'plus': setOperator('+'); break;
+        case 'minus': setOperator('−'); break;
+        case 'multiply': setOperator('×'); break;
+        case 'divide': setOperator('÷'); break;
+        case 'percent': setOperator('%'); break;
+        case 'equal': calculate(); break;
+        case 'gt': handleGT(); break;
+      }
+    }
+  });
+});
+
+updateDisplay();
