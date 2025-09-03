@@ -48,7 +48,7 @@ A simple guessing game where the user tries to guess a randomly generated number
     ```
 2. Open any `index.html` file in your browser.
 
-## 📄 License
+## 📄 License 
 
 MIT License
 
