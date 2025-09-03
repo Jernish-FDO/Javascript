@@ -1,29 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Random Number</title>
-  </head>
-
-  <body>
-    <h1>Guess The Number 1-10</h1>
-    <input id="guessnumber" placeholder="Enter The Number" type="number" required>
-    <button onclick="check()" id="btn1" type="button">Check The Number</button>
-    <div class="box1">
-      <p>Your Answer is :</p>
-      <p id="your">____</p>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guess the Number (1-10)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Guess the Number</h1>
+    <div class="instructions">I'm thinking of a number between <strong>1</strong> and <strong>10</strong>. Can you guess it?</div>
+    <div class="score-heart">
+      <span id="score">Score: 0</span>
+      <span id="hearts" class="hearts">❤️❤️❤️❤️❤️</span>
     </div>
-    <div class="box2">
-      <p>Computer Answer is :</p>
-      <p id="computer">____</p>
-    </div>
-    <div class="box3">
-      <p>Your Score is :</p>
-      <p id="score"></p>
-    </div>
-
-    <script src="script.js"></script>
-  </body>
+    <input type="number" id="guessInput" min="1" max="10" placeholder="1-10">
+    <button id="guessBtn">Guess</button>
+    <div class="message" id="message"></div>
+    <div class="attempts" id="attempts"></div>
+    <button id="restartBtn" style="display:none;">Restart</button>
+  </div>
+  <script src="script.js"></script>
+</body>
 </html>
