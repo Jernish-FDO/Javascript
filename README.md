@@ -46,7 +46,7 @@ A simple guessing game where the user tries to guess a randomly generated number
 
 - 🖥️ HTML5
 - 🎨 CSS3
-- ⚡ JavaScript (Vanilla)
+- ⚡ JavaScript
 
 ---
 
@@ -54,10 +54,10 @@ A simple guessing game where the user tries to guess a randomly generated number
 
 1. Clone the repository:
     ```bash
-    git clone <your-repository-url>
+    git clone https://github.com/Jernish-FDO/Javascript.git
     cd Javascript
     ```
-2. Open any `index.html` file in your browser.
+2. Open `index.html` file in your any browser.
 
 ---
 
@@ -66,5 +66,3 @@ A simple guessing game where the user tries to guess a randomly generated number
 MIT License
 
 ---
-
-**Author:** 🌟
