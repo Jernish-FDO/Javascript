@@ -67,4 +67,4 @@ MIT License
 
 ---
 
-**Author:**
+**Author:** 🌟
